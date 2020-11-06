@@ -1,0 +1,204 @@
+/* Colors */
+/* Typography */
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+  font-size: 12px;
+  color: black;
+}
+
+.container {
+  max-width: 375px;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+/* HEADER SECTION*/
+.intro {
+  background-image: url(../images/mobile-image-hero-1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 360px;
+}
+
+.logo {
+  margin: 0 auto;
+}
+
+.burger-menu {
+  padding-left: 2em;
+  cursor: pointer;
+}
+
+.closeBtn {
+  cursor: pointer;
+}
+
+.burger-menu,
+.closeBtn {
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.burger-menu:hover,
+.closeBtn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 5em;
+  position: relative;
+}
+
+.nav__container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 5em;
+  padding: 0 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: transparent;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.nav__container .nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav__container .nav__link {
+  list-style: none;
+  padding: 0;
+  margin-left: 2em;
+}
+
+.nav__container .nav__link a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav__container .nav__link::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  background: black;
+  margin: 0.3em auto 0;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.nav__container .nav__link:hover::after {
+  width: 60%;
+}
+
+.nav__list--active {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  background: white;
+}
+
+/* Image Slider Nav*/
+.hero__section {
+  position: relative;
+}
+
+.hero__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  right: 0;
+  top: -4em;
+  cursor: pointer;
+}
+
+.btn {
+  padding: 1em 2.5em;
+  background: black;
+}
+
+/* Hero Description*/
+.hero__description,
+.about__description {
+  padding: 1.5em;
+}
+
+.hero__description h1,
+.about__description h1 {
+  font-size: 1.9rem;
+  line-height: 1.1;
+}
+
+.hero__description p,
+.about__description p {
+  line-height: 1.5;
+  color: #a1a1a1;
+  margin-bottom: 3em;
+}
+
+.cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  width: 80%;
+}
+
+.cta .cta_p {
+  color: black;
+  font-weight: 600;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+}
+
+.about__section {
+  padding: 0;
+}
+
+.about__description h2 {
+  margin-top: 4em;
+  font-size: .8rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=index.css.map */
