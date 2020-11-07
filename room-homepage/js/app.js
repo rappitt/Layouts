@@ -1,10 +1,10 @@
-const burgerMenu = document.querySelector(".burger-menu"),
-    navList = document.querySelector(".nav__container"),
-    closeBtn = document.querySelector(".closeBtn");
+const burgerBtn = document.querySelector(".burgerBtn"),
+    closeBtn = document.querySelector(".closeBtn"),
+    navbar = document.querySelector(".navbar");
 
-burgerMenu.addEventListener("click", () => {
-    navList.classList.toggle("nav__list--active")
-})
-closeBtn.addEventListener("click", () => {
-    navList.classList.toggle("nav__list--active")
-})
+burgerBtn.addEventListener("click", toggleNav);
+closeBtn.addEventListener("click", toggleNav);
+
+function toggleNav() {
+    navbar.classList.toggle("navbar--active")
+}
