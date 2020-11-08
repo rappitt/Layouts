@@ -120,4 +120,27 @@ img {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
+
+.hero__nav {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.prevBtn,
+.nextBtn {
+  padding: 1.4em 1.8em;
+  cursor: pointer;
+  -webkit-transition: background 350ms ease-in;
+  transition: background 350ms ease-in;
+}
+
+.prevBtn:hover,
+.nextBtn:hover {
+  background: #454545;
+}
 /*# sourceMappingURL=index.css.map */
