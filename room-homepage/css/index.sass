@@ -10,17 +10,39 @@ body
     color: $dark
 img
     width: 100%
-    display: inline-block
+    display: block
 /* Typographie */
+h1
+    font-size: 1.6rem
+    line-height: 1.1
+h3
+    letter-spacing: 4px
+    text-transform: uppercase
+    font-size: .8rem
+p
+    color: $dark-gray
+    line-height: 1.5
+    margin-bottom: 2em
+
+.cta__text
+    color: $dark
+    font-size: .8rem
+    letter-spacing: 8px
+    text-transform: uppercase
+
 /* Layout Mobile*/
 .container
     width: 375px
     margin: 0 auto
-    background: $dark-gray
 
+.content
+    padding: 4em 2.2em
+
+/* HEADER SECTION */
 .header
     position: relative
 
+// top Navigation
 .navigation
     display: flex
     align-items: center
@@ -33,6 +55,8 @@ img
 
 .logo
     margin: 0 auto
+
+//Navbar
 
 .navbar
     background: $light
@@ -68,6 +92,7 @@ img
                     width: 50%
 .navbar--active
     transform: translateY(0)
+
 .burgerBtn,
 .closeBtn
     cursor: pointer
@@ -75,12 +100,19 @@ img
     &:hover
         transform: scale(1.1)
 
+// Slider Navigation
+
+.hero__image
+    // position: relative
+    img
+        // position: absolute
+        z-index: -1
 .hero__nav
     position: absolute
     bottom: 0
     right: 0
     background: $dark
-
+    z-index: 10
     display: flex
 
 .prevBtn,
@@ -90,3 +122,24 @@ img
     transition: background 350ms ease-in
     &:hover
         background: $darker-gray
+
+/* HERO SECTION */
+
+.cta
+    display: flex
+    align-items: baseline
+    justify-content: space-between
+    svg
+        margin: 0 auto
+.slides
+    opacity: 0
+
+.ease-out
+    opacity: 0
+    transition: opacity 2s
+
+.hide
+    display: none
+.ease-in
+    opacity: 1
+    transition: opacity 2s
