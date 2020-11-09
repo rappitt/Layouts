@@ -1,0 +1,321 @@
+$dark: hsl(0, 0%, 63%);
+$darker: hsl(0, 0%, 27%);
+$black: hsl(0, 0%, 0%);
+$white: hsl(0, 0%, 100%);
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap');
+@mixin transition {
+    transition: 0.15s ease-in-out;
+}
+
+@mixin fadeInAnimation {
+    animation: 'fadeIn' 2s linear forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+picture,
+img {
+    display: block;
+}
+
+body {
+    font-family: 'Spartan', sans-serif;
+    font-size: 12px;
+    position: relative;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+h1,
+h2,
+h3 {
+    color: $black;
+    margin-bottom: 20px;
+}
+
+h1,
+h2 {
+    font-size: 2.2em;
+}
+
+h3 {
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-weight: 700;
+}
+
+p {
+    line-height: 1.6;
+    color: $dark;
+}
+
+.nav {
+    position: absolute;
+    z-index: 100;
+    display: flex;
+    // align-items: center;
+    width: 100%;
+    padding: 3em 2em;
+    top: 0;
+    left: 0;
+    &__toggle {
+        z-index: 110;
+        img:last-child {
+            display: none;
+        }
+    }
+    &__items {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 3em 2em 3em 8em;
+        background: $white;
+        transform: translateX(-100%);
+        @include transition;
+    }
+    &__link {
+        color: $black;
+        font-weight: 700;
+        text-decoration: none;
+    }
+    &__logo {
+        margin: auto;
+    }
+    &.open {
+        .nav__background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparentize($color: $black, $amount: 0.7);
+            z-index: -1;
+        }
+        .nav__toggle img {
+            &:first-child {
+                display: none;
+            }
+            &:last-child {
+                display: block;
+            }
+        }
+        .nav__items {
+            transform: translateX(0);
+        }
+    }
+}
+
+.hero-image {
+    position: relative;
+    &__items {
+        height: 100%;
+    }
+    &__img {
+        height: 100%;
+        display: none;
+        @include fadeInAnimation;
+        &.active {
+            display: block;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__control {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 10;
+        display: flex;
+        list-style: none;
+    }
+    &__prev {
+        background: url('../images/icon-angle-left.svg') no-repeat center $black;
+    }
+    &__next {
+        background: url('../images/icon-angle-right.svg') no-repeat center $black;
+    }
+    &__prev,
+    &__next {
+        width: 60px;
+        height: 55px;
+        @include transition;
+        cursor: pointer;
+        img {
+            height: 1.5em;
+        }
+        &:hover,
+        &:focus {
+            background-color: $darker;
+        }
+    }
+}
+
+.content {
+    padding: 6em 2em;
+    &__link {
+        display: flex;
+        align-items: center;
+        color: $black;
+        text-transform: uppercase;
+        font-weight: 600;
+        text-decoration: none;
+        margin-top: 4em;
+        letter-spacing: 0.8em;
+        @include transition;
+        &:after {
+            content: '';
+            display: inline-block;
+            height: 1em;
+            width: 4em;
+            margin-left: 3em;
+            background: url('../images/icon-arrow.svg') no-repeat;
+        }
+        &:hover,
+        &:focus {
+            opacity: 0.5;
+        }
+    }
+    &--top {
+        display: none;
+        @include fadeInAnimation;
+        &.active {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+.section {
+    &__img {
+        height: 266px;
+        margin: auto;
+    }
+}
+
+@media (min-width: 992px) {
+    body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+    .container {
+        max-width: 1440px;
+    }
+    .section {
+        display: flex;
+        &--top {
+            height: 525px;
+        }
+        &--bottom {
+            height: 275px;
+        }
+        &__img {
+            height: 100%;
+            width: 29.1%;
+        }
+    }
+    h1,
+    h2 {
+        font-size: 3em;
+        font-weight: 600;
+    }
+    .hero-image {
+        width: 58.3%;
+        height: 100%;
+        &__control {
+            right: unset;
+            left: 100%;
+            width: 21.6%;
+            height: 80px;
+        }
+        &__next,
+        &__prev {
+            width: 50%;
+            height: 100%;
+        }
+    }
+    .content {
+        flex: 1;
+        padding: 6em 4em;
+        &--top * {
+            width: 400px;
+        }
+        &__link {
+            margin-top: 3em;
+        }
+    }
+    .nav {
+        width: 58.3%;
+        padding: 5.2em 3.2em;
+        &__toggle {
+            display: none;
+        }
+        &__logo {
+            display: block;
+            margin: 0 0 0 2em;
+        }
+        &__items {
+            position: static;
+            padding: 0;
+            transform: none;
+            background: transparent;
+            width: auto;
+            margin-left: 3.5em;
+        }
+        &__link {
+            color: $white;
+            padding: 1.2em;
+            position: relative;
+            &::after {
+                content: "";
+                width: 0;
+                height: 2px;
+                display: block;
+                background: $white;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                @include transition;
+                transform: translateX(-50%);
+            }
+            &:hover::after,
+            &:active::after,
+            &:focus::after {
+                width: 2em;
+            }
+        }
+        &__background {
+            display: none;
+        }
+    }
+}
