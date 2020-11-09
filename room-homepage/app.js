@@ -1,30 +1,31 @@
-// NAVIGATION TOGGLER
-const navtoggle = document.querySelector('.nav__toggle');
-const nav = document.querySelector('.nav');
-const navBackground = document.querySelector('.nav__background');
-navtoggle.onclick = function(e) {
-    e.preventDefault()
-    if (nav.classList.contains('open')) {
-        nav.classList.remove('open');
-    } else {
-        nav.classList.add('open');
-    }
-}
-navBackground.onclick = function() {
-    nav.classList.remove('open');
-}
+//Vaiables
 
-//HERO IMAGE SLIDER
-const heroImagePrev = document.querySelector('.hero-image__prev');
-const heroImageNext = document.querySelector('.hero-image__next');
-heroImagePrev.onclick = function(e) { heroImageSlide(e, -1); };
-heroImageNext.onclick = function(e) { heroImageSlide(e, 1); };
+const navtoggle = document.querySelector('.nav__toggle'),
+    nav = document.querySelector('.nav'),
+    navBackground = document.querySelector('.nav__background'),
+    heroImagePrev = document.querySelector('.hero-image__prev'),
+    heroImageNext = document.querySelector('.hero-image__next');
+
+// TOGGLE NAVIGATION
+
+navtoggle.addEventListener("click", () => {
+    nav.classList.toggle("open")
+})
+navBackground.addEventListener("click", () => {
+    nav.classList.toggle("open")
+})
+
+//Image Slider 
+
+heroImagePrev.addEventListener("click", (e) => heroImageSlide(e, -1))
+heroImageNext.addEventListener("click", (e) => heroImageSlide(e, 1))
+
 
 function heroImageSlide(e, dir) {
     e.preventDefault();
-    const items = document.querySelectorAll('.hero-image__img');
-    const contents = document.querySelectorAll('.content--top');
-    const count = items.length;
+    const items = document.querySelectorAll('.hero-image__img'),
+        contents = document.querySelectorAll('.content--top'),
+        count = items.length;
     let current;
     for (let i = 0; i < count; i++) {
         if (items[i].classList.contains('active')) {
@@ -38,15 +39,4 @@ function heroImageSlide(e, dir) {
     if (active < 0) active = count - 1;
     items[active].classList.add('active');
     contents[active].classList.add('active');
-}
-
-// ATTRIBUTION
-const attribution = document.querySelector('.attribution__toggle');
-attribution.onclick = function(e) {
-    e.preventDefault()
-    if (attribution.classList.contains('open')) {
-        attribution.classList.remove('open');
-    } else {
-        attribution.classList.add('open');
-    }
 }
