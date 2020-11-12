@@ -24,4 +24,4 @@ This site has full functionality.
 
 ### Visit my site and test the full project
 
-    [DevNico](https//www.devnico.de)
+    [DevNico](https://www.devnico.de)
