@@ -1,3 +1,15 @@
+<?php 
+    $navigation = array(
+      "#" => "Home",
+      "#services" => "Dienstleistungen",
+      "#portfolio" => "Portfolio",
+      "#aboutus" => "Über uns",
+      "#team" => "Team",
+      "#contact" => "Kontakt",
+      "admin/index.php" => "Admin"
+
+    );
+?>
 <header class="page-header">
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-dark">
@@ -7,24 +19,15 @@
             </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav text-center">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#services">Dienstleistungen</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#portfolio">Portfolio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#aboutus">Über&nbsp;uns</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#team">Team</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Kontakt</a>
-                        </li>
+                        <?php foreach($navigation AS $key => $value): ?>
+                            <li class="nav-item<?php if($key == "#"): ?> active<?php endif;?>">
+                            <a class="nav-link" href="<?php echo e($key); ?>">
+                                <?php echo e($value); ?>
+                                <?php if($key == "#"): ?>
+                                    <span class="sr-only">(current)</span>
+                                <?php endif;?>  
+                            </a></li>
+                        <?php endforeach;?> 
                     </ul>
                 </div>
             </nav>

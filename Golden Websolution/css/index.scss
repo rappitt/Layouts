@@ -1,0 +1,19 @@
+$font-size-base: 1rem;
+$primary: #fed136;
+$header-jumbotron-height: 300px;
+$section-padding: 120px;
+$section-color-alternate: #f7f7f7;
+$round-image-border: 5px;
+$page-menu-size: 175px;
+html {
+    scroll-behavior: smooth;
+}
+
+@import "../lib/bootstrap/scss/bootstrap";
+@import "../styles/header";
+@import "../styles/services";
+@import "../styles/portfolio";
+@import "../styles/aboutus";
+@import "../styles/team";
+@import "../styles/contact";
+@import "../styles/footer";
