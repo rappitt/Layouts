@@ -1,0 +1,106 @@
+@import "./_variables"
+
+@media (min-width: 800px)
+
+    h1
+        font-size: 4rem
+    h2
+        font-size: 3rem
+    h3
+        font-size: 1.5rem
+    body
+        font-size: 1.125rem
+
+    .hamburger,
+    .nav-toggle
+        display: none
+
+    .nav
+        bottom: 100%
+        right: 0
+        left: 0
+        max-width: 1000px
+        margin: 0 auto
+        padding: 1.2em
+        display: flex
+        align-items: center
+        justify-content: space-between
+        white-space: nowrap
+        transform: translateX(0)
+        background: transparent
+
+    .nav__list
+        flex-direction: row
+        justify-content: flex-start
+        margin: 0
+
+    .nav__link
+        color: $clr-dark
+        font-weight: $fw-reg
+        font-size: 1rem
+    .intro
+        display: grid
+        width: min-content
+        height: 60vh
+        justify-content: center
+        align-items: center
+        margin: 0 auto
+        grid-column-gap: 1em
+        grid-template-areas: "img title" "img subtitle"
+        grid-template-columns: min-content max-content
+    .catchphrase
+        display: none
+    .intro__img
+        grid-area: img
+        min-width: 250px
+        position: relative
+        z-index: 2
+
+    .section__subtitle--intro
+        align-self: start
+        grid-column: -1 / 1
+        grid-row: 2
+        text-align: right
+        position: relative
+        left: -.5em
+        z-index: -1
+        width: calc( 100% + 2.5em )
+    .services
+        display: flex
+        max-width: 1000px
+        margin-left: auto
+        margin-right: auto
+
+    .service + .service
+        margin-left: 2em
+
+    .portfolio-item
+        max-width: 45%
+        margin: .3em
+@media (min-width: 600px)
+
+    .about-me
+        display: grid
+        grid-template-columns: 1fr 200px
+        grid-template-areas: "title img" "subtitle img" "text img"
+        grid-column-gap: 2em
+
+    .section__title--about
+        grid-area: title
+    .section__subtitle--about
+        grid-column: 1 / -1
+        grid-row: 2
+        position: relative
+        left: -1em
+        width: calc( 100% + 2em  )
+        padding-left: 1em
+        padding-right: calc( 200px + 4em )
+        z-index: -1
+    .about-me__img
+        grid-area: img
+
+    .container
+        margin: 0 auto
+        display: flex
+        justify-content: space-between
+        align-items: baseline

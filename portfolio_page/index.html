@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Developer - Webdevelopment</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/index.min.css" type="text/css" />
+    <script src="https://kit.fontawesome.com/50a2af5a13.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header">
+        <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+        <nav class="nav">
+            <div class="logo">
+                <h3>DevJane</h3>
+            </div>
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="#home" class="nav__link">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#about" class="nav__link">About</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#work" class="nav__link">Work</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#contact" class="nav__link">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Introduction -->
+    <div class="nav-change"></div>
+    <section class="intro" id="home">
+        <h1 class="section__title section__title--intro">
+            Hi, I am<strong>Jane Doe</strong>
+        </h1>
+        <p class="section__subtitle section__subtitle--intro">
+            Frontend Developer
+        </p>
+        <img class="intro__img" src="images/dev-jane-01.jpg" alt="DevJane" />
+
+    </section>
+
+    <!-- My services -->
+    <section class="my-services" id="services">
+        <h2 class="section__title section__title--services">Skills</h2>
+
+        <div class="services">
+            <div class="service">
+                <div class="icon-container">
+                    <i class="fas fa-pencil-ruler"></i>
+                </div>
+
+                <h3>Web Design</h3>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste, aperiam. Alias aspernatur numquam, consequuntur vel distinctio rerum libero similique dolorem culpa at voluptatem. Ab labore et, iusto animi necessitatibus corporis.
+                </p>
+            </div>
+
+            <div class="service">
+                <div class="icon-container">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+
+                <h3>Web Development</h3>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad unde voluptatem commodi! Labore culpa repellat excepturi accusamus, quis eos omnis obcaecati minus nihil numquam autem deserunt tempore eius, fuga enim?
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- / service -->
+
+        <div class="skillbars">
+            <div class="skill-label">
+                <i class="fab fa-html5 html"></i>
+                <i class="fab fa-css3-alt css"></i>
+                <i class="fab fa-sass sass"></i>
+                <i class="fab fa-bootstrap bootstrap"></i>
+                <i class="fab fa-js-square javascript"></i>
+                <i class="fab fa-react react"></i>
+                <i class="fab fa-git-alt git"></i>
+                <i class="fab fa-php php"></i>
+                <div class="skill">
+                    <p>Basic</p>
+                    <p>Average</p>
+                    <p>Advanced</p>
+                    <p>Rockstar</p>
+                </div>
+            </div>
+            <div class="skillbar">
+                <div class="skillbar-label">HTML/CSS</div>
+                <div class="skillbar-bg" data-width="94"></div>
+            </div>
+            <div class="skillbar">
+                <div class="skillbar-label">Javascript</div>
+                <div class="skillbar-bg" data-width="65"></div>
+            </div>
+            <div class="skillbar">
+                <div class="skillbar-label">jQuery / React</div>
+                <div class="skillbar-bg" data-width="35"></div>
+            </div>
+            <div class="skillbar">
+                <div class="skillbar-label">PHP / MySQL</div>
+                <div class="skillbar-bg" data-width="25"></div>
+            </div>
+            <div class="skillbar">
+                <div class="skillbar-label">Web/UX Design</div>
+                <div class="skillbar-bg" data-width="43"></div>
+            </div>
+        </div>
+        </div>
+
+        <!-- / services -->
+
+        <a href="#work" class="btn btn-lg">Work</a>
+
+    </section>
+
+    <!-- About me -->
+    <section class="about-me" id="about">
+        <h2 class="section__title section__title--about">This is me</h2>
+        <p class="section__subtitle section__subtitle--about">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        </p>
+
+        <div class="about-me__body">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui dolores commodi tenetur similique placeat non possimus atque nulla quia dolore. At modi ducimus eos aspernatur.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni consequatur reprehenderit maxime fugit quos assumenda explicabo dicta mollitia quasi aspernatur, esse totam tenetur dolorum beatae, soluta expedita commodi quia tempore temporibus dolore,
+                autem labore libero similique. Eos adipisci velit architecto, itaque fugiat ab saepe quaerat consectetur magni minus dignissimos deserunt!</p>
+
+
+            </p>
+        </div>
+
+        <img class="about-me__img" src="images/dev-jane-02.jpg" alt="Jane leaning against a bus" />
+    </section>
+
+    <!-- My Work -->
+    <section class="my-work" id="work">
+        <h2 class="section__title section__title--work">My Work</h2>
+        <p class="section__subtitle section__subtitle--work">
+            Lorem ipsum dolor sit.
+        </p>
+        <div class="portfolio-items">
+            <!-- Portfolio item 1 -->
+            <figure class="portfolio-item">
+                <img class="portfolio-image" src="images/portfolio-01.jpg" alt="Project" />
+                <figcaption>
+                    <h2 class="portfolio-title">Project Title</h2>
+                    <p class="portfolio-desc">
+                        Lorem ipsum dolor sit amet.
+                    </p>
+                    <a href="#" class="portfolio-link">Read more</a>
+                </figcaption>
+
+                <!-- Portfolio modal 1 -->
+                <div class="portfolio-modal">
+                    <button class="modal-close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <div class="portfolio-header header-one">
+                        <div class="portfolio-title-box">
+                            <h2 class="portfolio-title">Project Title</h2>
+                            <p class="portfolio-subtitle">Lorem ipsum dolor sit.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- / portfolio-header -->
+                    <div class="portfolio-content">
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, voluptas?
+                        </p>
+                        <img class="portfolio-full-width" src="images/port/portfolio-01.jpg" alt="an image" />
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis non veniam ducimus minus ab voluptatem voluptates? Nemo, a saepe esse voluptates ab sapiente. Fuga quae necessitatibus, laborum cum aperiam beatae.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quibusdam consectetur placeat distinctio vel officia expedita eos harum mollitia corrupti! Totam, consequuntur doloribus? Neque, est optio temporibus excepturi necessitatibus provident!
+                        </p>
+                        <img class="portfolio-pull-left" src="images/port/portfolio-03.jpg" alt="an image" />
+                        <p>
+                            Aenean mattis tristique elementum. Duis massa tellus, tempus non fermentum at, venenatis et augue. Phasellus tristique purus sed sagittis interdum. Duis luctus sapien justo, vel viverra ex convallis et. Maecenas suscipit lacus ut lectus mattis ornare.
+                            Vestibulum faucibus purus sit amet erat lobortis, tristique fringilla leo sodales. Interdum et malesuada fames ac ante.
+                        </p>
+                        <p>
+                            Aenean mattis tristique elementum. Duis massa tellus, tempus non fermentum at, venenatis et augue. Phasellus tristique purus sed sagittis interdum. Duis luctus sapien justo, vel viverra ex convallis et. Maecenas suscipit lacus ut lectus mattis ornare.
+                            Vestibulum faucibus purus sit amet erat lobortis, tristique fringilla leo sodales. Interdum et malesuada fames ac ante.
+                        </p>
+                        <img class="portfolio-pull-right" src="images/port/portfolio-04.jpg" alt="an image" />
+                    </div>
+                </div>
+                <!-- /modal -->
+            </figure>
+            <!-- Portfolio item 2 -->
+            <figure class="portfolio-item">
+                <img class="portfolio-image" src="images/portfolio-02.jpg" alt="Project" />
+                <figcaption>
+                    <h2 class="portfolio-title">Project Title</h2>
+                    <p class="portfolio-desc">
+                        Lorem ipsum dolor sit amet.
+                    </p>
+                    <a href="#" class="portfolio-link">Read more</a>
+                </figcaption>
+
+                <!-- Portfolio modal 1 -->
+                <div class="portfolio-modal">
+                    <button class="modal-close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <div class="portfolio-header header-one">
+                        <div class="portfolio-title-box">
+                            <h2 class="portfolio-title">Project Title</h2>
+                            <p class="portfolio-subtitle">Lorem ipsum dolor sit.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- / portfolio-header -->
+                    <div class="portfolio-content">
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, voluptas?
+                        </p>
+                        <img class="portfolio-full-width" src="images/port/portfolio-01.jpg" alt="an image" />
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis non veniam ducimus minus ab voluptatem voluptates? Nemo, a saepe esse voluptates ab sapiente. Fuga quae necessitatibus, laborum cum aperiam beatae.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quibusdam consectetur placeat distinctio vel officia expedita eos harum mollitia corrupti! Totam, consequuntur doloribus? Neque, est optio temporibus excepturi necessitatibus provident!
+                        </p>
+                        <img class="portfolio-pull-left" src="images/port/portfolio-03.jpg" alt="an image" />
+                        <p>
+                            Aenean mattis tristique elementum. Duis massa tellus, tempus non fermentum at, venenatis et augue. Phasellus tristique purus sed sagittis interdum. Duis luctus sapien justo, vel viverra ex convallis et. Maecenas suscipit lacus ut lectus mattis ornare.
+                            Vestibulum faucibus purus sit amet erat lobortis, tristique fringilla leo sodales. Interdum et malesuada fames ac ante.
+                        </p>
+                        <p>
+                            Aenean mattis tristique elementum. Duis massa tellus, tempus non fermentum at, venenatis et augue. Phasellus tristique purus sed sagittis interdum. Duis luctus sapien justo, vel viverra ex convallis et. Maecenas suscipit lacus ut lectus mattis ornare.
+                            Vestibulum faucibus purus sit amet erat lobortis, tristique fringilla leo sodales. Interdum et malesuada fames ac ante.
+                        </p>
+                        <img class="portfolio-pull-right" src="images/port/portfolio-04.jpg" alt="an image" />
+                    </div>
+                </div>
+                <!-- /modal -->
+            </figure>
+            <!-- Portfolio item 3 -->
+            <figure class="portfolio-item">
+                <img class="portfolio-image" src="images/portfolio-03.jpg" alt="Project" />
+                <figcaption>
+                    <h2 class="portfolio-title">Project Title</h2>
+                    <p class="portfolio-desc">
+                        Lorem ipsum dolor sit amet.
+                    </p>
+                    <a href="#" class="portfolio-link">Read more</a>
+                </figcaption>
+
+                <!-- Portfolio modal 1 -->
+                <div class="portfolio-modal">
+                    <button class="modal-close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <div class="portfolio-header header-one">
+                        <div class="portfolio-title-box">
+                            <h2 class="portfolio-title">Project Title</h2>
+                            <p class="portfolio-subtitle">Lorem ipsum dolor sit.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- / portfolio-header -->
+                    <div class="portfolio-content">
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, voluptas?
+                        </p>
+                        <img class="portfolio-full-width" src="images/port/portfolio-01.jpg" alt="an image" />
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis non veniam ducimus minus ab voluptatem voluptates? Nemo, a saepe esse voluptates ab sapiente. Fuga quae necessitatibus, laborum cum aperiam beatae.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quibusdam consectetur placeat distinctio vel officia expedita eos harum mollitia corrupti! Totam, consequuntur doloribus? Neque, est optio temporibus excepturi necessitatibus provident!
+                        </p>
+                        <img class="portfolio-pull-left" src="images/port/portfolio-03.jpg" alt="an image" />
+                        <p>
+                            Aenean mattis tristique elementum. Duis massa tellus, tempus non fermentum at, venenatis et augue. Phasellus tristique purus sed sagittis interdum. Duis luctus sapien justo, vel viverra ex convallis et. Maecenas suscipit lacus ut lectus mattis ornare.
+                            Vestibulum faucibus purus sit amet erat lobortis, tristique fringilla leo sodales. Interdum et malesuada fames ac ante.
+                        </p>
+                        <p>
+                            Aenean mattis tristique elementum. Duis massa tellus, tempus non fermentum at, venenatis et augue. Phasellus tristique purus sed sagittis interdum. Duis luctus sapien justo, vel viverra ex convallis et. Maecenas suscipit lacus ut lectus mattis ornare.
+                            Vestibulum faucibus purus sit amet erat lobortis, tristique fringilla leo sodales. Interdum et malesuada fames ac ante.
+                        </p>
+                        <img class="portfolio-pull-right" src="images/port/portfolio-04.jpg" alt="an image" />
+                    </div>
+                </div>
+                <!-- /modal -->
+            </figure>
+
+            <!-- Portfolio item 4 -->
+            <figure class="portfolio-item">
+                <img class="portfolio-image" src="images/portfolio-04.jpg" alt="Project" />
+                <figcaption>
+                    <h2 class="portfolio-title">Project Title</h2>
+                    <p class="portfolio-desc">
+                        Lorem ipsum dolor sit amet.
+                    </p>
+                    <a href="#" class="portfolio-link">Read more</a>
+                </figcaption>
+
+                <!-- Portfolio modal 1 -->
+                <div class="portfolio-modal">
+                    <button class="modal-close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <div class="portfolio-header header-one">
+                        <div class="portfolio-title-box">
+                            <h2 class="portfolio-title">Project Title</h2>
+                            <p class="portfolio-subtitle">Lorem ipsum dolor sit.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- / portfolio-header -->
+                    <div class="portfolio-content">
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, voluptas?
+                        </p>
+                        <img class="portfolio-full-width" src="images/port/portfolio-01.jpg" alt="an image" />
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis non veniam ducimus minus ab voluptatem voluptates? Nemo, a saepe esse voluptates ab sapiente. Fuga quae necessitatibus, laborum cum aperiam beatae.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quibusdam consectetur placeat distinctio vel officia expedita eos harum mollitia corrupti! Totam, consequuntur doloribus? Neque, est optio temporibus excepturi necessitatibus provident!
+                        </p>
+                        <img class="portfolio-pull-left" src="images/port/portfolio-03.jpg" alt="an image" />
+                        <p>
+                            Aenean mattis tristique elementum. Duis massa tellus, tempus non fermentum at, venenatis et augue. Phasellus tristique purus sed sagittis interdum. Duis luctus sapien justo, vel viverra ex convallis et. Maecenas suscipit lacus ut lectus mattis ornare.
+                            Vestibulum faucibus purus sit amet erat lobortis, tristique fringilla leo sodales. Interdum et malesuada fames ac ante.
+                        </p>
+                        <p>
+                            Aenean mattis tristique elementum. Duis massa tellus, tempus non fermentum at, venenatis et augue. Phasellus tristique purus sed sagittis interdum. Duis luctus sapien justo, vel viverra ex convallis et. Maecenas suscipit lacus ut lectus mattis ornare.
+                            Vestibulum faucibus purus sit amet erat lobortis, tristique fringilla leo sodales. Interdum et malesuada fames ac ante.
+                        </p>
+                        <img class="portfolio-pull-right" src="images/port/portfolio-04.jpg" alt="an image" />
+                    </div>
+                </div>
+                <!-- /modal -->
+            </figure>
+            <!-- Portfolio item 5 -->
+
+        </div>
+
+
+    </section>
+    <!-- Contact Section-->
+    <section class="contact" id="contact">
+        <h2 class="section__title section__title--work">Contact</h2>
+        <p class="section__subtitle section__subtitle--work">
+            Lorem ipsum dolor sit amet consectetur.
+        </p>
+        <form class="contact__form" method="POST" action="#">
+            <input class="form__input" type="text" name="name" placeholder="Your Name *" required />
+            <input class="form__input" type="email" name="email" placeholder="Your E-Mail *" required />
+            <input class="form__input" type="text" name="subject" placeholder="Subject *" required />
+            <textarea class="form__input form__input--message" name="message" placeholder="Your Message *" required></textarea>
+            <a href="#" class="btn btn-lg">Send</a>
+        </form>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <a href="mailto:info@janedoe.de" class="footer__link">info@janedoe.de</a
+        >
+        <ul class="social-list">
+          <li class="social-list__item">
+            <a class="social-list__link" href="https://codepen.io">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            </li>
+            <li class="social-list__item">
+                <a class="social-list__link" href="http://dribbble.com">
+                    <i class="fab fa-codepen"></i>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://github.com/rappitt" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </li>
+            </ul>
+            <p class="copyright">by <a href="devnico.de">DevNico</a> 2020</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
